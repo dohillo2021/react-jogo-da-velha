@@ -1,8 +1,8 @@
+import Header from '../header/Header'
 function GamePage () {
   return(
       <div className="container">
-      <h1>Jogo da Velha</h1>
-      <p>Criado por William Machado</p>
+        <Header />
       </div>
   )
 }
