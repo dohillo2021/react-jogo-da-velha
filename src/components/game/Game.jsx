@@ -4,7 +4,7 @@ import GameOption from '../gameOption/GameOption'
 
 function Game () {
   return (
-    <div>
+    <div className={styles.game} >
       <GameOption />
       <GameOption />
       <GameOption />
