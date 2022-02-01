@@ -1,46 +1,25 @@
-<<<<<<< HEAD
+import { useState } from 'react'
+
 import styles from './Game.module.css'
 
 import GameOption from '../gameOption/GameOption'
 
+
 function Game() {
+    const [gameState, setGameState] = useState(Array(9).fill(0))
+    console.log(gameState)
     return(
-        <div>
-            <GameOption />
-            <GameOption />
-            <GameOption />
-            <GameOption />
-            <GameOption />
-            <GameOption />
-            <GameOption />
-            <GameOption />
-            <GameOption />
+        <div className={styles.game}>
+            {
+                gameState.map((value, pos) => 
+                <GameOption
+                    key={ ` game-option-pos-${pos} `}
+                    status={value}
+                />)
+            }
+            
         </div>
     )
 }
 
 export default Game
-=======
-import styles from './Game.module.css'
-
-import GameOption from '../gameOption/GameOption'
-
-function Game () {
-  return (
-    <div className={styles.game} >
-      <GameOption />
-      <GameOption />
-      <GameOption />
-      <GameOption />
-      <GameOption />
-      <GameOption />
-      <GameOption />
-      <GameOption />
-      <GameOption />
-    </div>
-  )
-
-}
-
-export default Game
->>>>>>> 1ae03e1544386240682d967b9d3b04d6e8a4d481
