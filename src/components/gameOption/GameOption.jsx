@@ -2,8 +2,8 @@ import styles from './GameOption.module.css'
 
 function GameOption () {
   return (
-    <div>
-      X
+    <div className={styles.gameOption}>
+      
     </div>
   )
 }
