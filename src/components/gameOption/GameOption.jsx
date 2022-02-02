@@ -1,9 +1,19 @@
 import styles from './GameOption.module.css'
+import Icon from '../icon/Icon'
 
-function GameOption () {
+const GameIcon = ({ iconName }) => <Icon iconName={iconName} size="25px"/>
+
+
+function GameOption ({status, onClick}) {
   return (
-    <div className={styles.gameOption}>
-      
+    <div className={styles.gameOption} onClick={onClick}>
+      {
+        status === 1 && <GameIcon iconName="circle" />
+      }
+
+      {
+        status === -1 && <GameIcon iconName="X" />
+      }    
     </div>
   )
 }
