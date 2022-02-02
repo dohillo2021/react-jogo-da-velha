@@ -1,4 +1,7 @@
+
 import { useState } from 'react'
+
+
 
 import styles from './Game.module.css'
 
@@ -10,6 +13,7 @@ function Game() {
     console.log(gameState)
     return(
         <div className={styles.game}>
+
             {
                 gameState.map((value, pos) => 
                 <GameOption
@@ -18,6 +22,7 @@ function Game() {
                 />)
             }
             
+
         </div>
     )
 }
