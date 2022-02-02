@@ -1,39 +1,52 @@
-<<<<<<< HEAD
 import { useState } from 'react'
 
-=======
->>>>>>> a2fecbc6b1fb66e0d52042de0f0479bfbf75e65a
+
+
 import styles from './Game.module.css'
+import Icon from '../icon/Icon'
 
 import GameOption from '../gameOption/GameOption'
 
 
 function Game() {
     const [gameState, setGameState] = useState(Array(9).fill(0))
-    console.log(gameState)
+
+    const[currentPlayer, setCurrentPlayer] = useState(1)
+
+    const handleClick = (pos) => { 
+        if (gameState[pos] === 0){
+            let newGameState = [...gameState]
+            newGameState[pos] = currentPlayer
+            setCurrentPlayer(currentPlayer * -1)
+            setGameState(newGameState)
+        }
+        
+    }
+   
     return(
-        <div className={styles.game}>
-<<<<<<< HEAD
+        <div className={styles.gameContent}>
+            <div className={styles.game}>
             {
                 gameState.map((value, pos) => 
                 <GameOption
                     key={ ` game-option-pos-${pos} `}
                     status={value}
+                    onClick={ () => handleClick(pos)  }
                 />)
             }
             
-=======
-            <GameOption />
-            <GameOption />
-            <GameOption />
-            <GameOption />
-            <GameOption />
-            <GameOption />
-            <GameOption />
-            <GameOption />
-            <GameOption />
->>>>>>> a2fecbc6b1fb66e0d52042de0f0479bfbf75e65a
+            </div>
+            <div className= { styles.gameInfo}>
+               <h4>Próximo a jogar:</h4> 
+               {
+                   currentPlayer === 1 && <Icon iconName="circle" />
+               }
+                {
+                   currentPlayer === -1 && <Icon iconName="x" />
+               }
+            </div>
         </div>
+        
     )
 }
 
