@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react'
 import styles from './Game.module.css'
+
 import GameOption from '../gameOption/GameOption'
 import GameInfo from '../gameInfo/GameInfo'
 
@@ -40,7 +41,7 @@ function Game() {
     }
 
     const handleReset = () => {
-        setCurrentPlayer(Array(9).fill(0))
+        setGameState(Array(9).fill(0))
         setWinner(0)
         setCurrentPlayer(-1)
     }
