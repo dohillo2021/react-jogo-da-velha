@@ -39,7 +39,13 @@ function Game() {
         })
     }
 
-
+    const handleReset = () => {
+        setCurrentPlayer(Array(9).fill(0))
+        setWinner(0)
+        setCurrentPlayer(-1)
+    }
+    
+    
     useEffect(() => {
         setCurrentPlayer(currentPlayer * -1)
         verifyGame()
@@ -49,16 +55,19 @@ function Game() {
         <div className={styles.gameContent}>
             <div className={styles.game}>
                 {
-                    gameState.map((value, pos) => 
-                    <GameOption
-                        key={ ` game-option-pos-${pos} `}
-                        status={value}
-                        onClick={ () => handleClick(pos)  }
-                    />)
+                        gameState.map((value, pos) => 
+                        <GameOption
+                            key={ ` game-option-pos-${pos} `}
+                            status={value}
+                            onClick={ () => handleClick(pos)  }
+                        />
+                    )
                 }
             </div>
             <GameInfo 
                 currentPlayer={currentPlayer}
+                winner={winner}
+                onReset={handleReset}
             />
         </div>
         
