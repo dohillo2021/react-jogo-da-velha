@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 .button {
   padding: 15px 30px;
   border-radius: 5px;
@@ -10,4 +11,18 @@
 .button:disabled {
   cursor:default;
   background-color: #61AEFF;
+=======
+.button {
+  padding: 15px 30px;
+  border-radius: 5px;
+  cursor:pointer;
+  border: nome;
+  background-color: #007BFF;
+  color: white
+}
+
+.button:disabled {
+  cursor:default;
+  background-color: #61AEFF;
+>>>>>>> 4cbb130b0552613fb51d0139b295f4773abae726
 }
