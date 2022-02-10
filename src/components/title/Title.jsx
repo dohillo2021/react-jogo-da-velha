@@ -6,3 +6,4 @@ function Title ({ children }) {
     )
 }
 
+export default Title

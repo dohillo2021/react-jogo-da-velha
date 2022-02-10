@@ -25,3 +25,4 @@ function GameOption ({status, onClick, isWinner}) {
   )
 }
 
+export default GameOption

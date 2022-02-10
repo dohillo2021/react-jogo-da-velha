@@ -51,3 +51,4 @@ function GameInfo ({currentPlayer, winner, onReset }) {
   )
 }
 
+export default GameInfo

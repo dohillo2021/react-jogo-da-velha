@@ -10,3 +10,4 @@ Icon.defaultProps = {
     size: '30px'
 }
 
+export default Icon

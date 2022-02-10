@@ -6,3 +6,4 @@ function Subtitle ({ children}) {
     )
 }
 
+export default Subtitle
