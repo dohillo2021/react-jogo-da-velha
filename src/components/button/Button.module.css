@@ -11,4 +11,5 @@
 .button:disabled {
     cursor: default;
     background-color: #61AEFF;
+
 }
