@@ -24,7 +24,7 @@ function Game() {
     const [winner, setWinner] = useState(0)
     const [winnerLine, setWinnerLine] = useState([])
     const [draw, setDraw] = useState(false)
-    const [xWinnerTimes, setXWunnerTimes]= useState(0)
+    const [xWinnerTimes, setXWinnerTimes]= useState(0)
     const [circleWinnerTimes, setCircleWinnerTimes]= useState(0)
 
     const handleClick = (pos) => { 
