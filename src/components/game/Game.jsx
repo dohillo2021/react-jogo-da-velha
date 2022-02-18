@@ -46,7 +46,7 @@ function Game() {
                 if (sum > 0) {
                     setCircleWinnerTimes(circleWinnerTimes + 1)
                 }else {
-                    setCircleWinnerTimes(xWinnerTimes + 1)
+                    SetXWinnerTimes(xWinnerTimes + 1)
                 }
             }
         })
