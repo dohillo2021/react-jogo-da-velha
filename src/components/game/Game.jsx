@@ -113,4 +113,8 @@ function Game() {
 
 export default Game
 
+
+
+//hospedagem vercel
+
 //https://react-jogo-da-velha-two.vercel.app/
